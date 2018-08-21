@@ -4,8 +4,6 @@ const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const bot = new Discord.Client()
 
-var token = ('NDUyMTUxNzg2MTM3MDU5MzI4.DgbfEQ.9zePsWm0Mo82JYoqBxKr3tf1E2c')
-
 bot.on('ready', function () {
     bot.user.setGame('preparation du serveur').catch(console.error)
 })
