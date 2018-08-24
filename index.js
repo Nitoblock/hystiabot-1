@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const logs = "482471811255107584";
 
 
 bot.on("ready", () => {
@@ -24,6 +25,25 @@ bot.on("message", message => {
 		message.delete();
 	}
 	});
+
+bot.on("messageDelete", message => {
+	// Salon de logs
+	if (!message.author.bot) {
+		var embed = new Discord.RichEmbed();
+		embed.setTitle(":x: Un message a été supprimé");
+		embed.setColor("#FF0000");
+		embed.setThumbnail(message.member.user.avatarURL);
+		embed.setTimestamp();
+		embed.addField("Utilisateur:", message.author);
+		embed.addField("ID de l'utilisateur:", message.member.id);
+		embed.addField("Message:", "```" + message.content + "```");
+		embed.addField("ID du message:", message.id);
+		embed.addField("Salon:", message.channel);
+		embed.addField("ID du salon:", message.channel.id);
+
+		bot.channels.get(logs).send({embed});
+	}
+});
 
 
 bot.login(process.env.BOT_TOKEN);
