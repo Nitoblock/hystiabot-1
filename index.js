@@ -43,7 +43,11 @@ bot.on("messageDelete", message => {
 
 		bot.channels.get(logs).send({embed});
 	};
-	
+	bot.on("message", message => {
+	// Commandes
+	var command = message.content.split(" ")[0].toLowerCase();
+	var args = message.content.split(" ").slice(1);
+		
 	if (command == "/help") {
     var embed = new Discord.RichEmbed();
     embed.setColor(0xFFBB00);
