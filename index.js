@@ -43,28 +43,7 @@ bot.on("messageDelete", message => {
 
 		bot.channels.get(logs).send({embed});
 	};
-	bot.on("message", message => {
-	// Commandes
-	var command = message.content.split(" ")[0].toLowerCase();
-	var args = message.content.split(" ").slice(1);
-		
-	if (command == "/help") {
-    var embed = new Discord.RichEmbed();
-    embed.setColor(0xFFBB00);
-    embed.setTitle("Liste des commandes");
-    embed.addField("/help", "Permet d’avoir la liste des commandes");
-    embed.addField("/ping", "Permet de récupérer le ping du bot");
-    embed.addField("/web", "Permet d'avoir le lien du site");
-    if (message.member.hasPermission("ADMINISTRATOR")) embed.addField("/annonce [texte]", "Permet de faire une annonce sur le serveur");
-    if (message.member.hasPermission("ADMINISTRATOR"))embed.addField("/ban @Utilisateur", "Commande de bannissement");
-    if (message.member.hasPermission("ADMINISTRATOR"))embed.addField("/tempban @Utilisateur", "Commande de banissement temporaire");
-    if (message.member.hasPermission("ADMINISTRATOR"))embed.addField("/mute @Utilisateur", "Commande de mute");
-    if (message.member.hasPermission("ADMINISTRATOR"))embed.addField("/tempmute @Utilisateur", "Commande de mute temporaire");
-    if (message.member.hasPermission("ADMINISTRATOR"))embed.addField("/promote @Uitlisateur", "Promote");
-    if (message.member.hasPermission("ADMINISTRATOR"))embed.addField("/say [texte]", "Permet de faire parlé le bot");
-    message.channel.send({embed}).then(msg => {msg.delete(10000)});
-    message.delete();
-}
+	
 });
 
 
