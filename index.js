@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const logs = "482471811255107584";
+const logs = "482471046222708737";
 
 
 bot.on("ready", () => {
