@@ -42,7 +42,7 @@ bot.on("messageDelete", message => {
 		embed.addField("ID du salon:", message.channel.id);
 
 		bot.channels.get(logs).send({embed});
-	});
+	};
 	
 	if (command == "/help") {
     var embed = new Discord.RichEmbed();
