@@ -4,7 +4,7 @@ const logs = "482471046222708737";
 
 
 bot.on("ready", () => {
-    bot.user.setActivity("Rien faire", {type: "PLAYING});
+    bot.user.setActivity("Rien faire", {type: "PLAYING"});
     console.log("[Plugline] Je suis actif (pour une fois)");
 });
 
