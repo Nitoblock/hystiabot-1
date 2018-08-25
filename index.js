@@ -4,7 +4,7 @@ const logs = "482471046222708737";
 
 
 bot.on("ready", () => {
-    bot.user.setActivity("Le meurtre du js, {type: "WATCHING"});
+    bot.user.setActivity("Le meurtre du js, {type: {"WATCHING"});
     console.log("[Plugline] Je suis actif (pour une fois)");
 });
 
