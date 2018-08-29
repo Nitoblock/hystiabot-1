@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const logs = "482471046222708737";
+const logs = "484477036023382016";
 
 
 bot.on("ready", () => {
     bot.user.setActivity("Rien faire", {type: "PLAYING"});
-    console.log("[Plugline] Je suis actif (pour une fois)");
+    console.log("[Hystiabot] Je suis actif (pour une fois)");
 });
 
 bot.on("message", message => {
